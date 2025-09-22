@@ -1,0 +1,6 @@
+minimumReleaseAge: 1440
+minimumReleaseAgeExclude:
+  - "@mutsuntsai/*"
+onlyBuiltDependencies:
+  - "core-js"
+  - "unrs-resolver"

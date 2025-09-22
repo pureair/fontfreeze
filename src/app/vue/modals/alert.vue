@@ -2,7 +2,7 @@
 	<v-dialog v-model="show" width="auto" persistent>
 		<v-card>
 			<v-card-text>
-				<div v-html="message"></div>
+				<div v-html="message"/>
 			</v-card-text>
 			<v-card-actions>
 				<v-btn color="primary" @click="show = false">OK</v-btn>

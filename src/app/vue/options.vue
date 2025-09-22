@@ -5,7 +5,7 @@
 			<v-text-field label="Font family suffix" v-model="store.options.suffix">
 				<template v-slot:prepend-inner>
 					<Tip
-						 title="Will be added after all family names. Default value is 'Freeze', suggesting that the font is generated with FontFreeze." />
+						title="Will be added after all family names. Default value is 'Freeze', suggesting that the font is generated with FontFreeze." />
 				</template>
 			</v-text-field>
 		</v-col>
@@ -15,7 +15,7 @@
 		<template v-if="store.options.customNames">
 			<v-col cols="12" sm="6" class="mt-2">
 				<v-text-field label="Font family" placeholder="Better be different from the original family name"
-							  v-model="store.options.family" />
+					v-model="store.options.family" />
 			</v-col>
 			<v-col cols="12" sm="6" class="mt-2">
 				<v-select label="Font subfamily" v-model="store.options.subfamily" :items="subfamilies">
@@ -29,7 +29,7 @@
 			</v-col>
 			<v-col cols="12" sm="6" class="mt-2">
 				<v-text-field label="Typographic subfamily" v-model="store.options.typo_subfamily"
-							  :placeholder="store.options.subfamily">
+					:placeholder="store.options.subfamily">
 					<template v-slot:prepend-inner>
 						<Tip title="'Light', 'SemiBold' etc. Leave it blank to use the same setting as subfamily." />
 					</template>
@@ -47,7 +47,8 @@
 			</v-text-field>
 		</v-col>
 		<v-col cols="12" md="6" class="mt-2">
-			<v-checkbox class="my-n3 my-md-0" label="Apply substitution by single-glyph features." v-model="store.options.singleSub" />
+			<v-checkbox class="my-n3 my-md-0" label="Apply substitution by single-glyph features."
+				v-model="store.options.singleSub" />
 		</v-col>
 		<v-col cols="12" md="6" class="mt-2">
 			<v-checkbox class="my-n3 my-md-0" label="Fix contour overlap issues on macOS." v-model="store.options.fixContour" />

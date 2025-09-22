@@ -10,7 +10,7 @@
 			</div>
 		</v-col>
 	</v-row>
-	<div class="pre control" :style="getPreviewStyle()"></div>
+	<div class="pre control" :style="getPreviewStyle()"/>
 </template>
 
 <script setup lang="ts">

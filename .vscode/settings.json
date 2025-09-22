@@ -36,11 +36,15 @@
 		".gitignore": ".gitattributes",
 		"Pipfile": "Pipfile.lock, pyproject.toml, .pylintrc",
 		"README.md": "LICENSE.md, CONTRIBUTING.md",
-		"package.json": "pnpm-lock.yaml, .npmrc, .browserslistrc"
+		"eslint.config.js": ".editorconfig",
+		"package.json": "pnpm-*.yaml, .npmrc, .browserslistrc"
 	},
 	"files.exclude": {
 		"**/__pycache__/": true,
 		"node_modules/": true,
-		"patches/": true
-	}
+		"patches/": true,
+		".venv/": true
+	},
+	"python-envs.defaultEnvManager": "ms-python.python:pipenv",
+	"python-envs.pythonProjects": []
 }

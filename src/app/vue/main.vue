@@ -2,7 +2,7 @@
 	<main v-if="store.font" class="px-8 pb-6">
 		<div class="mt-4 text-center">
 			<span :style="`vertical-align:-0.25rem; font-family: preview${store.previewIndex};`"
-				  class="text-primary text-h5 me-4">{{
+				class="text-primary text-h5 me-4">{{
 					store.font.family }}</span>
 			<div class="d-inline-block">
 				<span class="me-3">{{ store.font.version }}</span>
@@ -32,10 +32,10 @@
 		<v-row class="mt-3">
 			<v-col cols="12" md="6" class="mt-2">
 				<v-number-input label="Additional line height" placeholder="in font units" :step="50"
-								v-model="store.options.lineHeight" @blur="validateNumber('lineHeight')">
+					v-model="store.options.lineHeight" @blur="validateNumber('lineHeight')">
 					<template v-slot:prepend-inner>
 						<Tip
-							 title="Only works in supported environments. The preview here is the simulated result (for non-zero values)." />
+							title="Only works in supported environments. The preview here is the simulated result (for non-zero values)." />
 					</template>
 					<template v-slot:clear="{ props }">
 						<v-icon v-if="store.options.lineHeight != 0" v-bind="props" icon="$delete" class="cursor-pointer" />
@@ -44,7 +44,7 @@
 			</v-col>
 			<v-col cols="12" md="6" class="mt-2">
 				<v-number-input label="Additional letter spacing" placeholder="in font units" :step="50"
-								v-model="store.options.spacing" @blur="validateNumber('spacing')" clearable>
+					v-model="store.options.spacing" @blur="validateNumber('spacing')" clearable>
 					<template v-slot:clear="{ props }">
 						<v-icon v-if="store.options.spacing != 0" v-bind="props" icon="$delete" class="cursor-pointer" />
 					</template>

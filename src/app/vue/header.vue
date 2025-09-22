@@ -11,11 +11,11 @@
 		<!-- shields.io -->
 		<div class="mb-3 mt-1">
 			<img class="me-1 me-sm-2 me-md-3 mt-2" alt="GitHub package.json version"
-				 :src="`https://img.shields.io/badge/version-v${version}-green`">
+				:src="`https://img.shields.io/badge/version-v${version}-green`">
 			<a class="me-1 me-sm-2 me-md-3" href="https://github.com/mutsuntsai/fontfreeze"><img alt="GitHub Repo stars"
-					 class="mt-2" src="https://img.shields.io/github/stars/mutsuntsai/fontfreeze?logo=GitHub&color=yellow"></a>
+				class="mt-2" src="https://img.shields.io/github/stars/mutsuntsai/fontfreeze?logo=GitHub&color=yellow"></a>
 			<a href="https://github.com/mutsuntsai"><img class="mt-2"
-					 src="https://img.shields.io/badge/%C2%A92022--2025-Mu--Tsun%20Tsai-blue"></a>
+				src="https://img.shields.io/badge/%C2%A92022--2025-Mu--Tsun%20Tsai-blue"></a>
 		</div>
 
 		<input type="file" class="d-none" id="upload" @change="openFile($event)" title="Open font file">

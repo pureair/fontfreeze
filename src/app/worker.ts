@@ -9,6 +9,12 @@ declare global {
 	const loadPyodide: typeof loadPy;
 }
 
+interface ExtendedPyodide extends PyodideInterface {
+	FS: PyodideInterface["FS"] & {
+		readFile: (name: string) => Uint8Array<ArrayBuffer>;
+	};
+}
+
 let bytesLoaded = 0;
 const fetchOriginal = fetch;
 
@@ -49,11 +55,11 @@ if(typeof TransformStream != "undefined") {
 // as Pyodide tends to focus only on the latest browsers as they develop.
 importScripts("https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js");
 
-let pyodide: PyodideInterface;
+let pyodide: ExtendedPyodide;
 
 async function init(): Promise<void> {
 	try {
-		pyodide = await loadPyodide({ fullStdLib: false });
+		pyodide = await loadPyodide({ fullStdLib: false }) as ExtendedPyodide;
 		await pyodide.loadPackage("brotli");
 		await pyodide.loadPackage("fonttools");
 

@@ -5,7 +5,7 @@
 				<h5 class="text-h5">
 					Variations
 					<Tip
-						 title="Whenever possible, use a non-variable version of the font as starting point, as it will likely give better hinting than the variable one." />
+						title="Whenever possible, use a non-variable version of the font as starting point, as it will likely give better hinting than the variable one." />
 				</h5>
 			</v-col>
 			<v-col>
@@ -24,12 +24,11 @@
 					</v-col>
 					<v-col class="d-none d-sm-block">
 						<v-slider v-model.number="store.variations[a.tag]" :min="a.min" :max="a.max" :step="getStep(a)"
-								  width="15rem" @update:model-value="clear">
-						</v-slider>
+							width="15rem" @update:model-value="clear"/>
 					</v-col>
 					<v-col>
 						<v-number-input density="compact" v-model="store.variations[a.tag]" :min="a.min" :max="a.max"
-										:step="getStep(a)" />
+							:step="getStep(a)" />
 					</v-col>
 				</v-row>
 			</div>
